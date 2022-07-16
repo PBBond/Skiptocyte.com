@@ -8,673 +8,667 @@ $greyHover: #c2c2c2;
 $width: 70%;
 
 @mixin flexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 i {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 body {
-  background: $blue;
+    background: $blue;
 }
 
 .visible-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 1920px;
-  margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1920px;
+    margin-top: 20px;
 }
 .print-form-header {
-  display: none;
+    display: none;
 }
 
 @import "./nav";
 
 //table top settings bar
 .table-top-setting {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: start;
-  padding-bottom: 15px;
-  border-bottom: 1px solid $grey;
-  button {
-    padding: 6px 30px;
-    background-color: $blue;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-right: 10px;
-    color: $grey;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-  }
-  .main-btn > i {
-    margin-right: 8px;
-  }
-  .main-btn:hover {
-    background: $bluehover;
-    transform: scale(1.01);
-  }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $grey;
+    button {
+        padding: 6px 30px;
+        background-color: $blue;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-right: 10px;
+        color: $grey;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+    .main-btn > i {
+        margin-right: 8px;
+    }
+    .main-btn:hover {
+        background: $bluehover;
+        transform: scale(1.01);
+    }
 }
 // dropbdown from settings bar
 
 @import "./arrow";
 
 .dropdown .dropbtn {
-  background-color: $grey;
-  color: $blue;
-  //min-width: 150px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 10px;
-  span {
-    pointer-events: none;
-  }
-  p {
-    min-width: 100px;
-    margin-right: 10px;
-    pointer-events: none;
-  }
+    background-color: $grey;
+    color: $blue;
+    //min-width: 150px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    span {
+        pointer-events: none;
+    }
+    p {
+        min-width: 100px;
+        margin-right: 10px;
+        pointer-events: none;
+    }
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover,
 .dropbtn:focus {
-  background-color: $grey;
+    background-color: $grey;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 300px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content .dropdown-link {
-  color: $darkblue;
-  padding: 0 0 0 12px;
-  text-decoration: none;
-  display: block;
+    color: $darkblue;
+    padding: 0 0 0 12px;
+    text-decoration: none;
+    display: block;
 }
 
 /* Change color of dropdown links on hover */
 .dropdown-content .dropdown-link:hover {
-  background-color: $grey;
+    background-color: $grey;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
-  display: block;
+    display: block;
 }
 
 .dropdown #myDropdown {
-  z-index: 6;
+    z-index: 6;
 }
 
 .dropdown {
-  .dd-option {
-    padding: 10px 0;
-  }
-  .dd-option {
-    pointer-events: none;
-  }
-  div.dropdown-link {
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-    align-items: center;
-    cursor: pointer;
-    input {
-      padding: 0.45rem;
-      width: 85%;
-      height: 100%;
-      border: none;
-      outline: none;
-      box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      cursor: text;
-      pointer-events: all;
+    .dd-option {
+        padding: 10px 0;
     }
-  }
-  i {
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    color: rgb(68, 68, 68);
-  }
-  .edit-trash-btns {
-    height: 100%;
-    display: flex;
-  }
-  .dd-trash-btn,
-  .dd-edit-btn {
-    padding: 0.6rem 0.8rem;
-    height: 100%;
-    width: 50%;
-    .fa-save {
-      font-size: 110%;
+    .dd-option {
+        pointer-events: none;
     }
-    &:hover {
-      background-color: rgb(204, 204, 204);
-    }
-  }
-  .dropdown-link:hover i {
-    opacity: 1;
-    transition: all 0.3s ease;
-  }
-  .dropdown-item,
-  .ignore-dropdown-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 7px;
-    border-top: 1px solid #ddd;
-    input {
-      padding: 0.45rem;
-      width: 85%;
-      height: 100%;
-      border: none;
-      outline: none;
-      box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
-    .span-btn {
-      padding: 0.3rem 0.6rem;
-      transition: all 0.3s ease;
-      min-width: 15%;
-      height: 100%;
-      border-radius: 5px;
-      margin-left: 7px;
-      height: 100%;
-      font-weight: 400;
-      background-color: $blue;
-      color: $grey;
-
-      &:hover {
-        background: $bluehover;
+    div.dropdown-link {
+        display: flex;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+        align-items: center;
         cursor: pointer;
-      }
+        input {
+            padding: 0.45rem;
+            width: 85%;
+            height: 100%;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            cursor: text;
+            pointer-events: all;
+        }
     }
-  }
+    i {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        color: rgb(68, 68, 68);
+    }
+    .edit-trash-btns {
+        height: 100%;
+        display: flex;
+    }
+    .dd-trash-btn,
+    .dd-edit-btn {
+        padding: 0.6rem 0.8rem;
+        height: 100%;
+        width: 50%;
+        .fa-save {
+            font-size: 110%;
+        }
+        &:hover {
+            background-color: rgb(204, 204, 204);
+        }
+    }
+    .dropdown-link:hover i {
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+    .dropdown-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px;
+        border-top: 1px solid #ddd;
+        input {
+            padding: 0.45rem;
+            width: 85%;
+            height: 100%;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .span-btn {
+            padding: 0.3rem 0.6rem;
+            transition: all 0.3s ease;
+            min-width: 15%;
+            height: 100%;
+            border-radius: 5px;
+            margin-left: 7px;
+            height: 100%;
+            font-weight: 400;
+            background-color: $blue;
+            color: $grey;
+
+            &:hover {
+                background: $bluehover;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 //draggable grid and table styles
 .wrapper {
-  width: $width;
-  background-color: $darkblue;
-  border-radius: 10px;
-  padding: 15px;
-  margin: 20px 20px 0 40px;
-  min-width: 25rem;
+    width: $width;
+    background-color: $darkblue;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 20px 0 40px;
+    min-width: 25rem;
 }
 
 .table-header {
-  color: $grey;
-  display: flex;
-  height: 50px;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  font-weight: 400;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-  span {
-    flex-basis: 130px;
-  }
+    color: $grey;
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    span {
+        flex-basis: 130px;
+    }
 }
 
 .grid {
-  position: relative;
-  input {
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    background-color: #273149;
-    color: white;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 1px 1px 3px #161c2f71;
-    &:hover {
-      transform: scale(1.05);
-      background-color: #2c3752;
+    position: relative;
+    input {
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background-color: #273149;
+        color: white;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 1px 1px 3px #161c2f71;
+        &:hover {
+            transform: scale(1.05);
+            background-color: #2c3752;
+        }
     }
-  }
-  input.key-td {
-    width: 30px;
-    font-size: 1.3rem;
-    padding: 0.3rem 0.2rem;
-  }
-  input.cell-td {
-    width: 150px;
-    font-size: 1rem;
-    padding: 0.5rem 0.2rem;
-  }
+    input.key-td {
+        width: 30px;
+        font-size: 1.3rem;
+        padding: 0.3rem 0.2rem;
+    }
+    input.cell-td {
+        width: 150px;
+        font-size: 1rem;
+        padding: 0.5rem 0.2rem;
+    }
 }
 .item {
-  font-size: 1.3rem;
-  display: block;
-  position: absolute;
-  width: calc(100% - 2px);
-  height: 40px;
-  margin: 2px;
-  z-index: 1;
-  background: $medblue;
-  color: $grey;
-  border-radius: 6px;
-  cursor: grab;
-  text-align: center;
+    font-size: 1.3rem;
+    display: block;
+    position: absolute;
+    width: calc(100% - 2px);
+    height: 40px;
+    margin: 2px;
+    z-index: 1;
+    background: $medblue;
+    color: $grey;
+    border-radius: 6px;
+    cursor: grab;
+    text-align: center;
 }
 .item.muuri-item-dragging {
-  z-index: 4;
-  cursor: grabbing;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+    z-index: 4;
+    cursor: grabbing;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
 }
 .item.muuri-item-releasing {
-  z-index: 3;
+    z-index: 3;
 }
 .item.muuri-item-hidden {
-  z-index: 0;
+    z-index: 0;
 }
 .item-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  span,
-  a {
-    flex-basis: 150px;
-  }
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    span,
+    a {
+        flex-basis: 150px;
+    }
 }
 
 .muuri-item-placeholder {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  z-index: 0;
-  border-radius: 5px;
-  border: 2px dashed $grey;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 0;
+    border-radius: 5px;
+    border: 2px dashed $grey;
 }
 // table row delete button
 
 .item:hover a.boxclose {
-  opacity: 1;
-  pointer-events: all;
+    opacity: 1;
+    pointer-events: all;
 }
 
 a.boxclose {
-  opacity: 0;
-  pointer-events: none;
-  cursor: pointer;
-  color: $grey;
-  border: 3px solid $darkblue;
-  border-radius: 5px;
-  background: $darkblue;
-  font-size: 31px;
-  font-weight: bold;
-  display: inline-block;
-  line-height: 0px;
-  padding: 11px 3px;
-  position: absolute;
-  top: 6px;
-  right: 8px;
-  transition: all 0.5s ease;
-  box-shadow: 0 0 3px #1115254f;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    color: $grey;
+    border: 3px solid $darkblue;
+    border-radius: 5px;
+    background: $darkblue;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 3px #1115254f;
 }
 
 .boxclose:before {
-  content: "×";
-  font-weight: 300;
-  position: relative;
-  bottom: 3px;
+    content: "×";
+    font-weight: 300;
+    position: relative;
+    bottom: 3px;
 }
 
 .boxclose:hover {
-  transform: scale(1.1);
-  color: white;
+    transform: scale(1.1);
+    color: white;
 }
 
 .grid .duplicate {
-  -moz-box-shadow: inset 0 0 3px #ff0000;
-  -webkit-box-shadow: inset 0 0 3px #ff0000;
-  box-shadow: inset 0 0 3px #fd0000;
-  color: red;
-  outline: none;
+    -moz-box-shadow: inset 0 0 3px #ff0000;
+    -webkit-box-shadow: inset 0 0 3px #ff0000;
+    box-shadow: inset 0 0 3px #fd0000;
+    color: red;
+    outline: none;
 }
 
 /* flash animation */
 .numPad #numPad-table .flash {
-  -webkit-animation-name: flash-animation;
-  -webkit-animation-duration: 0.3s;
+    -webkit-animation-name: flash-animation;
+    -webkit-animation-duration: 0.3s;
 
-  animation-name: flash-animation;
-  animation-duration: 0.3s;
+    animation-name: flash-animation;
+    animation-duration: 0.3s;
 }
 
 @-webkit-keyframes flash-animation {
-  from {
-    background-color: lightblue;
-  }
-  to {
-    background: default;
-  }
+    from {
+        background-color: lightblue;
+    }
+    to {
+        background: default;
+    }
 }
 
 @keyframes flash-animation {
-  from {
-    background-color: lightblue;
-  }
-  to {
-    background: default;
-  }
+    from {
+        background-color: lightblue;
+    }
+    to {
+        background: default;
+    }
 }
 
 /* flash animation */
 .flash-empty {
-  -webkit-animation-name: flash-empty-animation;
-  -webkit-animation-duration: 1s;
-  animation-name: flash-empty-animation;
-  animation-duration: 1s;
+    -webkit-animation-name: flash-empty-animation;
+    -webkit-animation-duration: 1s;
+    animation-name: flash-empty-animation;
+    animation-duration: 1s;
 }
 
 @-webkit-keyframes flash-empty-animation {
-  0% {
-    outline: 1px solid red;
-  }
-  20% {
-    outline: none;
-  }
-  40% {
-    outline: 1px solid red;
-  }
-  60% {
-    outline: none;
-  }
-  80% {
-    outline: 1px solid red;
-  }
-  100% {
-    outline: none;
-  }
+    0% {
+        outline: 1px solid red;
+    }
+    20% {
+        outline: none;
+    }
+    40% {
+        outline: 1px solid red;
+    }
+    60% {
+        outline: none;
+    }
+    80% {
+        outline: 1px solid red;
+    }
+    100% {
+        outline: none;
+    }
 }
 
 @keyframes flash-empty-animation {
-  0% {
-    outline: 1px solid red;
-  }
-  20% {
-    outline: none;
-  }
-  40% {
-    outline: 1px solid red;
-  }
-  60% {
-    outline: none;
-  }
-  80% {
-    outline: 1px solid red;
-  }
-  100% {
-    outline: none;
-  }
+    0% {
+        outline: 1px solid red;
+    }
+    20% {
+        outline: none;
+    }
+    40% {
+        outline: 1px solid red;
+    }
+    60% {
+        outline: none;
+    }
+    80% {
+        outline: 1px solid red;
+    }
+    100% {
+        outline: none;
+    }
 }
 
 /*checkmark animation after updating prests */
 .checkmark__circle {
-  stroke-dasharray: 166;
-  stroke-dashoffset: 166;
-  stroke-width: 2;
-  stroke-miterlimit: 10;
-  stroke: $grey;
-  fill: none;
-  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: $grey;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
 }
 
 .checkmark {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: block;
-  stroke-width: 4;
-  stroke: $blue;
-  stroke-miterlimit: 10;
-  box-shadow: inset 0px 0px 0px $grey;
-  animation: fill 0.4s ease-in-out 0.4s forwards,
-    scale 0.3s ease-in-out 0.9s both;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 4;
+    stroke: $blue;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px $grey;
+    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
 }
 
 .checkmark__check {
-  transform-origin: 50% 50%;
-  stroke-dasharray: 48;
-  stroke-dashoffset: 48;
-  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
 }
 
 @keyframes stroke {
-  100% {
-    stroke-dashoffset: 0;
-  }
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 @keyframes scale {
-  0%,
-  100% {
-    transform: none;
-  }
-  50% {
-    transform: scale3d(1.1, 1.1, 1);
-  }
+    0%,
+    100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
 }
 @keyframes fill {
-  100% {
-    box-shadow: inset 0px 0px 0px 30px $grey;
-  }
+    100% {
+        box-shadow: inset 0px 0px 0px 30px $grey;
+    }
 }
 
 .check-cont {
-  transform: scale(1);
-  display: inline-block;
-  position: relative;
-  right: 6px;
-  margin-right: 4px;
+    transform: scale(1);
+    display: inline-block;
+    position: relative;
+    right: 6px;
+    margin-right: 4px;
 }
 
 .update-preset-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  span {
-    pointer-events: none;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        pointer-events: none;
+    }
 }
 
 //tool tips
 
 .tooltip {
-  position: relative;
+    position: relative;
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: $verydarkblue;
-  color: #fff;
-  text-align: center;
-  border-radius: 3px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: 120%;
-  left: 50%;
-  margin-left: -60px;
-  font-size: 0.8rem;
+    visibility: hidden;
+    width: 120px;
+    background-color: $verydarkblue;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 0.8rem;
 }
 
 .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent black transparent;
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
-  pointer-events: none;
+    visibility: visible;
+    pointer-events: none;
 }
 
 .homepage-btn-container {
-  position: absolute;
-  top: 30%;
-  left: 15%;
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-  h1 {
-    color: $darkblue;
-    font-size: 4rem;
-    margin-bottom: 30px;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.1), 0px 8px 13px rgba(0, 0, 0, 0.1),
-      0px 18px 23px rgba(0, 0, 0, 0.1);
-  }
-  a {
-    padding: 20px;
-    text-decoration: none;
-    background: $blue;
-    color: $grey;
-    font-weight: 500;
-    font-size: 1.5em;
-    margin: 20px 0;
-    width: 250px;
-    border-radius: 5px;
-    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-      0 6px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: all 0.3s ease;
-    &:hover {
-      background: $medblue;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    h1 {
+        color: $darkblue;
+        font-size: 4rem;
+        margin-bottom: 30px;
+        text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.1), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
     }
-  }
+    a {
+        padding: 20px;
+        text-decoration: none;
+        background: $blue;
+        color: $grey;
+        font-weight: 500;
+        font-size: 1.5em;
+        margin: 20px 0;
+        width: 250px;
+        border-radius: 5px;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06), 0 6px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+        &:hover {
+            background: $medblue;
+        }
+    }
 }
 
 .hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: url("../assets/hero-illustration.png");
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url("../assets/hero-illustration.png");
 
-  /* Set a specific height */
-  height: calc(100vh - 88px);
+    /* Set a specific height */
+    height: calc(100vh - 88px);
 
-  /* Position and center the image to scale nicely on all screens */
-  background-position: top 10% right 10%;
-  background-repeat: no-repeat;
-  background-size: 60%;
-  position: relative;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: top 10% right 10%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    position: relative;
 }
 
 .homepage-btn-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  h1 {
-    color: $grey;
-    font-size: 4rem;
-    margin-bottom: 30px;
-    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.1), 0px 8px 13px rgba(0, 0, 0, 0.1),
-      0px 18px 23px rgba(0, 0, 0, 0.1);
-    font-weight: 500;
-  }
-  a {
-    padding: 20px;
-    text-decoration: none;
-    background: $grey;
-    color: $blue;
-    font-weight: 500;
-    font-size: 1.5em;
-    margin: 20px 0;
-    width: 250px;
-    border-radius: 5px;
-    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-      0 6px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: all 0.3s ease;
-    &:hover {
-      background: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    h1 {
+        color: $grey;
+        font-size: 4rem;
+        margin-bottom: 30px;
+        text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.1), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+        font-weight: 500;
     }
-  }
+    a {
+        padding: 20px;
+        text-decoration: none;
+        background: $grey;
+        color: $blue;
+        font-weight: 500;
+        font-size: 1.5em;
+        margin: 20px 0;
+        width: 250px;
+        border-radius: 5px;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06), 0 6px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+        &:hover {
+            background: white;
+        }
+    }
 }
 
 @media (max-width: 992px) {
-  .hero-image {
-    background-position: top 60% left 90%;
-    background-size: 80%;
-  }
-  .homepage-btn-container {
-    margin-left: 30px;
-    h1 {
-      font-size: 2.4rem;
+    .hero-image {
+        background-position: top 60% left 90%;
+        background-size: 80%;
     }
-    a {
-      font-size: 1.2rem;
-      width: 80%;
-      margin: 20px 0;
+    .homepage-btn-container {
+        margin-left: 30px;
+        h1 {
+            font-size: 2.4rem;
+        }
+        a {
+            font-size: 1.2rem;
+            width: 80%;
+            margin: 20px 0;
+        }
     }
-  }
 }
 
 @media (max-width: 480px) {
-  .hero-image {
-    background-position: bottom 0% left 50%;
-    background-size: 100%;
-  }
-  .homepage-btn-container {
-    margin-left: 30px;
-    top: 5%;
-    h1 {
-      font-size: 2.4rem;
+    .hero-image {
+        background-position: bottom 0% left 50%;
+        background-size: 100%;
     }
-    a {
-      font-size: 1.2rem;
-      width: 80%;
-      margin: 5px 0;
+    .homepage-btn-container {
+        margin-left: 30px;
+        top: 5%;
+        h1 {
+            font-size: 2.4rem;
+        }
+        a {
+            font-size: 1.2rem;
+            width: 80%;
+            margin: 5px 0;
+        }
     }
-  }
 }
 
 @import "./rightpanel";
