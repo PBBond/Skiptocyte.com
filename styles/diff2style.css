@@ -653,7 +653,8 @@ body {
   transition: all 0.3s ease;
 }
 
-.dropdown .dropdown-item {
+.dropdown .dropdown-item,
+.dropdown .ignore-dropdown-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -667,7 +668,8 @@ body {
   border-top: 1px solid #ddd;
 }
 
-.dropdown .dropdown-item input {
+.dropdown .dropdown-item input,
+.dropdown .ignore-dropdown-item input {
   padding: 0.45rem;
   width: 85%;
   height: 100%;
@@ -678,7 +680,8 @@ body {
   border-radius: 5px;
 }
 
-.dropdown .dropdown-item .span-btn {
+.dropdown .dropdown-item .span-btn,
+.dropdown .ignore-dropdown-item .span-btn {
   padding: 0.3rem 0.6rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -692,7 +695,8 @@ body {
   color: #e5e5e5;
 }
 
-.dropdown .dropdown-item .span-btn:hover {
+.dropdown .dropdown-item .span-btn:hover,
+.dropdown .ignore-dropdown-item .span-btn:hover {
   background: #2366be;
   cursor: pointer;
 }
@@ -970,8 +974,8 @@ a.boxclose {
   stroke-miterlimit: 10;
   -webkit-box-shadow: inset 0px 0px 0px #e5e5e5;
           box-shadow: inset 0px 0px 0px #e5e5e5;
-  -webkit-animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
-          animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+  -webkit-animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+          animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
 }
 
 .checkmark__check {
