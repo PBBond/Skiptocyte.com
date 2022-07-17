@@ -724,15 +724,31 @@ body {
 }
 
 .table-header span {
-  -ms-flex-preferred-size: 130px;
-      flex-basis: 130px;
+  -ms-flex-preferred-size: 150px;
+      flex-basis: 150px;
+}
+
+.table-header :first-child {
+  -ms-flex-preferred-size: 70px;
+      flex-basis: 70px;
+}
+
+.table-header :nth-child(2) {
+  -ms-flex-preferred-size: 70px;
+      flex-basis: 70px;
+}
+
+input[type="checkbox"] {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  accent-color: #303a5e;
 }
 
 .grid {
   position: relative;
 }
 
-.grid input {
+.grid input[type="text"] {
   border: none;
   outline: none;
   border-radius: 5px;
@@ -745,7 +761,7 @@ body {
           box-shadow: 1px 1px 3px #161c2f71;
 }
 
-.grid input:hover {
+.grid input[type="text"]:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   background-color: #2c3752;
@@ -813,6 +829,16 @@ body {
 .item-content a {
   -ms-flex-preferred-size: 150px;
       flex-basis: 150px;
+}
+
+.item-content :first-child {
+  -ms-flex-preferred-size: 70px;
+      flex-basis: 70px;
+}
+
+.item-content :nth-child(2) {
+  -ms-flex-preferred-size: 70px;
+      flex-basis: 70px;
 }
 
 .muuri-item-placeholder {

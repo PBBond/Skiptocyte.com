@@ -169,4 +169,14 @@ header img {
           align-items: center;
   margin: 0;
 }
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.ignore-header,
+.exclude {
+  position: absolute;
+  opacity: 0;
+}
 /*# sourceMappingURL=print.css.map */
