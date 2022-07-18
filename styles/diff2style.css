@@ -1434,10 +1434,10 @@ a.boxclose {
   width: 25%;
   max-width: 100px;
   height: 80px;
-  background: #000000;
 }
 
-.numPad table a {
+.numPad table button {
+  background-color: #000000;
   height: 100%;
   width: 100%;
   text-decoration: none;
@@ -1455,21 +1455,70 @@ a.boxclose {
       justify-content: space-around;
   font-weight: 500;
   font-size: 1.1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  outline: none;
+  border: none;
+  border-radius: 5px;
 }
 
-.numPad table a .numpad-key {
+.numPad table button:hover {
+  background-color: #0e1119;
+}
+
+.numPad table button .numpad-key {
   padding: 0 5%;
+  text-align: center;
+  width: 100%;
+  pointer-events: none;
 }
 
-.numPad table a .numpad-cell {
+.numPad table button .numpad-cell {
+  pointer-events: none;
   overflow: hidden;
   width: 100%;
-  font-size: 0.75rem;
+  font-size: 55%;
   letter-spacing: 0.5px;
   font-weight: 300;
   color: #81b7fd;
   padding: 0 5%;
   overflow-wrap: break-word;
+}
+
+.kiss {
+  -webkit-animation: kiss 0.2s;
+          animation: kiss 0.2s;
+}
+
+@-webkit-keyframes kiss {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes kiss {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 #counter-control-btns-container {

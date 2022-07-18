@@ -159,6 +159,15 @@ document.addEventListener(
       e.target.blur();
       e.target.parentElement.parentElement.parentElement.classList.toggle("exclude");
     }
+    if (e.target.classList[0] === "numpad-btn") {
+      e.target.classList.add("kiss");
+      setTimeout(() => {
+        e.target.classList.remove("kiss");
+      }, 200);
+      counterFunnction(e);
+      const canVibrate = window.navigator.vibrate;
+      if (canVibrate) window.navigator.vibrate(100);
+    }
   },
   false
 );
@@ -391,6 +400,42 @@ function absoluteCounter(e) {
   }
 }
 
+// updates count when user clicks or taps numpad
+function counterFunnction(e) {
+  let numpadNum = e.target.childNodes[0].innerText;
+  let numpadCell = e.target.childNodes[2].innerText;
+
+  //if numpad doesn't have a cell, ignore and return
+  if (!numpadCell) {
+    return;
+  } else {
+    //find the associated table row and update counts
+    for (let i = 0; i < keytd.length; i++) {
+      if (keytd[i].value === numpadNum) {
+        if (minusBtn.classList.contains("plus-minus-active")) {
+          subtractCounter(i);
+          updateRelative();
+          absoluteCounter(e);
+        } else {
+          let numerator = Number(currentCount.innerText);
+          let denominator = Number(maxWbcCountDenominator.innerText);
+          let ding = document.getElementById("ding-sound");
+          if (isNaN(denominator) || numerator < denominator) {
+            if (!counttd[i].innerHTML) {
+              counttd[i].innerHTML = "0";
+            }
+            addCounter(i), updateRelative(), absoluteCounter(e);
+            if (Number(currentCount.innerText) >= Number(maxWbcCountDenominator.innerText)) {
+              ding.play();
+            }
+          } else {
+            ding.play();
+          }
+        }
+      }
+    }
+  }
+}
 // key binding counter big ass function
 window.addEventListener("keydown", function (e) {
   // fires when user is not clicked inside of an input
