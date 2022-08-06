@@ -165,8 +165,6 @@ document.addEventListener(
         e.target.classList.remove("kiss");
       }, 200);
       counterFunnction(e);
-      const canVibrate = window.navigator.vibrate;
-      if (canVibrate) window.navigator.vibrate(100);
     }
   },
   false
@@ -409,6 +407,8 @@ function counterFunnction(e) {
   if (!numpadCell) {
     return;
   } else {
+    const canVibrate = window.navigator.vibrate;
+    if (canVibrate) window.navigator.vibrate(100);
     //find the associated table row and update counts
     for (let i = 0; i < keytd.length; i++) {
       if (keytd[i].value === numpadNum) {
@@ -446,10 +446,10 @@ window.addEventListener("keydown", function (e) {
         for (j = 0; j < keytd.length; j++) {
           [].forEach.call(numpadKey, function (key) {
             if (e.key == key.innerText) {
-              key.parentElement.parentElement.classList.add("flash");
+              key.parentElement.classList.add("flash");
             }
             setTimeout(() => {
-              key.parentElement.parentElement.classList.remove("flash");
+              key.parentElement.classList.remove("flash");
             }, 100);
           });
         }
