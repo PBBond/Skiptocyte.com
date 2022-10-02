@@ -19,5 +19,5 @@ According to Google Analytics, the site traffic is increasing with dozens of dai
 * Counter will keep going up to the max count. A audible "ding" is heard when the maximum count is reached.
 * A report can be printed by click the "print" button
 * This application also responsive and works in mobile. Tapping the squares on the numpad replaces keyboard clicks in the mobile version
-
+![Website demo](https://github-media.s3.amazonaws.com/skiptocyte(1).gif)
 <img alt="website demonstration" src="https://github-media.s3.amazonaws.com/skiptocyte(1).gif" width="1000" />
