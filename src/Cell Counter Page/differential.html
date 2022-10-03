@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6LKPRJ3DN7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6LKPRJ3DN7');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="sty class="numpad-btn"lebutton">
+    <link rel="stylesheet" href="../styles/diff2style.css" media="screen">
+    <link rel="stylesheet"  href="../styles/print.css" type="text/css" media="print">
+    <link rel="shortcut icon" 
+      type="image/svg" 
+      href="../assets/favicon.svg"> 
+    <meta name="description" content="Free online tool for laboratories: Cell differential WBC counter for laboratories">
+    <title>Online WBC Counter: Laboratory Tools</title>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="../index.html"><img class="logo-img" src="../assets/logo.svg" alt="logo" /></a>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+
+            <div id="main-list-div" class="main-list-container">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Dilution Conversion Page/dilution.html">Dilution</a></li>
+                    <li><a href="#">Counter</a></li>
+                    <li><a href="../Contact Page/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+    
+    <div class="print-form-header">
+        <div class="header-grid">
+            <div class="container">
+                <p>Name:</p>
+            </div>
+          
+            <div class="container">
+                <p>DOB:</p>
+            </div>
+          
+            <div class="container">
+                <p>MRN:</p>
+            </div>
+
+            <div class="container">
+                <p>Specimen #:</p>
+             </div>
+          
+            <div class="container">
+                <p>Tech:</p>
+             </div>
+
+            <div class="container">
+                <p>Date:</p>
+            </div>
+        </div>
+    </div>
+
+   <div class="visible-container">
+    <div class="wrapper">
+        <div class="table-top-setting">
+            <button class="add-tr-btn main-btn"><i class="fas fa-plus"></i>Add</button>
+            <button class="clear-tr-btn main-btn"><i class="fas fa-eraser"></i>Clear</button>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><p id="dropbtn-text">Presets</p><span class="arrow"></span></button>
+                <div id="myDropdown" class="dropdown-content">
+                <!-- <div class="dropdown-link">                
+                    <input type="text" class="edit-preset" placeholder="New Preset Name" value = 'hello>
+                    <span class="edit-trash-btns">
+                        <span class="dd-edit-btn tooltip"><i class="fas fa-edit"></i><span class="tooltiptext">Edit Preset Name</span></span>
+                        <span class="dd-trash-btn tooltip"><i class="fas fa-trash-alt"></i><span class="tooltiptext">Delete Preset</span></span>
+                    </span>
+                </div> -->
+                <!-- <span class="dd-option">Link 1</span> -->
+                  
+                  <div class="dropdown-item"><input type="text" id='preset-input' class="add-new-preset" placeholder="New Preset Name"><span class="save-btn span-btn">Save</span></div>
+                </div>
+              </div>
+              <button class="update-preset-btn main-btn"><i class="fas fa-save"></i><span>Update Preset</span> </button>
+        </div>
+        <div class="table-header">
+            <span class="ignore-header">Ignore</span>
+            <span class="key-th">Key</span>
+            <span>Cell</span>
+            <span class="count-th">Count</span>
+            <span>Relative</span>
+            <span>Absolute</span>
+        </div>
+        <div class="grid">
+            <div class="item">
+              <div class="item-content">
+                <span><input type="checkbox"></span>
+                  <span><input maxlength="1" type="text" value="5" class="key-td"></span>
+                  <span class="cell"><input type="text" value="Neutrophil" class="cell-td"></span>
+                  <span class="count-td"></span>
+                  <span class="relative-td"></span>
+                  <span class="absolute-td"></span>
+                  <a class="boxclose" id="boxclose"></a>
+              </div>
+            </div>
+            <div class="item">
+                <div class="item-content">
+                    <span><input type="checkbox"></span>
+                    <span><input maxlength="1" type="text" value="4" class="key-td"></span>
+                    <span class="cell"><input type="text" value="Lymphocyte" class="cell-td"></span>
+                    <span class="count-td"></span>
+                    <span class="relative-td"></span>
+                    <span class="absolute-td"></span>
+                    <a class="boxclose" id="boxclose"></a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                    <span><input type="checkbox"></span>
+                    <span><input maxlength="1" type="text" value="3" class="key-td"></span>
+                    <span class="cell"><input type="text" value="Monocyte" class="cell-td"></span>
+                    <span class="count-td"></span>
+                    <span class="relative-td"></span>
+                    <span class="absolute-td"></span>
+                    <a class="boxclose" id="boxclose"></a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                    <span><input type="checkbox"></span>
+                    <span><input maxlength="1" type="text" value="2" class="key-td"></span>
+                    <span class="cell"><input type="text" value="Basophil" class="cell-td"></span>
+                    <span class="count-td"></span>
+                    <span class="relative-td"></span>
+                    <span class="absolute-td"></span>
+                    <a class="boxclose" id="boxclose"></a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-content">
+                    <span><input type="checkbox"></span>
+                    <span><input maxlength="1" type="text" value="1" class="key-td"></span>
+                    <span class="cell"><input type="text" value="Eosinophil" class="cell-td"></span>
+                    <span class="count-td"></span>
+                    <span class="relative-td"></span>
+                    <span class="absolute-td"></span>
+                    <a class="boxclose" id="boxclose"></a>
+                </div>
+              </div>
+           
+          </div>
+    </div>
+
+    <div id="right-side-container">
+        <div class="side-panel">
+            <div class="count-tracker">
+                
+                    <div class="num-denom">
+                        <span id="current-count">0</span>
+                        <span>/</span>
+                        <span id="max-count">100</span>
+                    </div>
+            
+                <button type="button" id="bt"><i class="fas fa-print"></i>Print</button>
+            </div>
+            <div class="max-wbc-count-container">
+                    <div class="max-wbc">
+                        <span>Enter Max Count</span>
+                        <input type="tel" value="100" class="max-wbc-input" maxlength="4" placeholder="&#8734;">
+                    </div>
+                
+                    <div class="wbcCount">
+                        <h3>WBC</h3>
+                        <div class="input-select-cont">
+                            <input type="tel" class="wbc-count-input" maxlength="10">
+                            <select name="" id="unit-select">
+                                <option value="10&#8313;/L">10&#8313;/L</option>
+                                <option value="10&#8310;/mL">10&#8310;/mL</option>
+                                <option value="10&#179;/&#181;L">10&#179;/&#181;L</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+            <div class="numPad">
+                <table id="numPad-table" class="numPad-table"> 
+                  <tr>
+                    <td><button class="numpad-btn"><p class="numpad-key">Num Lock</p> <p class="numpad-cell"></p></button></td>
+                    <td><button class="numpad-btn"><p class="numpad-key">/</p> <p class="numpad-cell"></p></abutton</td>
+                    <td><button class="numpad-btn"><p class="numpad-key">*</p> <p class="numpad-cell"></p></button></td>
+                    <td><button class="numpad-btn"><p class="numpad-key">-</p> <p class="numpad-cell"></p></button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="numpad-btn"><p class="numpad-key">7</p> <p class="numpad-cell">Neutrophil</p></button></td>
+                    <td><button class="numpad-btn"><p class="numpad-key">8</p> <p class="numpad-cell">Neutrophil</p></button></td>
+                    <td><button class="numpad-btn"><p class="numpad-key">9</p> <p class="numpad-cell">Neutrophil</p></button></td>
+                    <td rowspan="2"><button class="numpad-btn"><p class="numpad-key">+</p> <p class="numpad-cell">Neutrophil</p></abutton</td>
+                  </tr>
+                  <tr>
+                    <td><button class="numpad-btn"><p class="numpad-key">4</p> <p class="numpad-cell"></p></button></td>
+                    <td><button class="numpad-btn"><p class="numpad-key">5</p> <p class="numpad-cell"></p></button></td>
+                    <td><button class="numpad-btn"><p class="numpad-key">6</p> <p class="numpad-cell"></p></button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="numpad-btn"><p class="numpad-key">1</p> <p class="numpad-cell"></p></button></td>
+                    <td><button class="numpad-btn"><p class="numpad-key">2</p> <p class="numpad-cell"></p></button></td>
+                    <td><button class="numpad-btn"><p class="numpad-key">3</p> <p class="numpad-cell"></p></button></td>
+                    <td rowspan="2"><button class="numpad-btn"><p class="numpad-key">Enter</p> <p class="numpad-cell"></p></button></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><button class="numpad-btn"><p class="numpad-key">0</p> <p class="numpad-cell"></p></button></td>
+                    <td><button class="numpad-btn"><p class="numpad-key">.</p> <p class="numpad-cell"></p></button></td>
+                  </tr>
+                </table>
+            </div>
+            <div id="counter-control-btns-container">
+                <div id="clear-table-btn-container">
+                    <button class="counter-control-btn" id="clear-table-btn">Clear</button>
+                </div>
+                <div id="plus-minus-btns">
+                    <button class="plus-minus-active counter-control-btn" id="plus-btn" ><i class="fas fa-plus"></i></button>
+                    <button class="counter-control-btn" id="minus-btn"><i class="fas fa-minus"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+    
+
+    
+    
+
+    
+   
+<audio id="ding-sound">
+    <source src="assets/audio.wav">
+</audio>
+
+
+<!-- <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.from%2CArray.prototype.forEach%2CNode.prototype.contains%2CString.prototype.includes%2CArray.prototype.includes"></script> -->
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<!-- <script>
+    $(function(){
+      $("#nav-placeholder").load("nav.html");
+    });
+</script> -->
+      <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.3/dist/muuri.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+<script src="../Javascript/diff2.js"></script>
+
+
+</body>
+</html>
+
+

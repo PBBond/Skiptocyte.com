@@ -1,0 +1,245 @@
+@mixin input {
+  border-radius: 5px;
+  background: $grey;
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  text-align: right;
+}
+
+@mixin button {
+  border-radius: 5px;
+  background: $blue;
+  color: $grey;
+  padding: 15px 10px;
+  border: none;
+  outline: none;
+  text-align: right;
+  cursor: pointer;
+}
+#right-side-container {
+  width: 30%;
+  min-width: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .side-panel {
+    width: 100%;
+    max-width: 28rem;
+
+    background-color: $darkblue;
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    .count-tracker,
+    .max-wbc-count-container,
+    .numPad {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.count-tracker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .num-denom {
+    width: 48%;
+    font-size: 1.5rem;
+    color: white;
+    background: $blue;
+    font-weight: 500;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 10px;
+  }
+  button {
+    padding: 5px 10px;
+    width: 48%;
+    background: $grey;
+    color: $blue;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    i {
+      margin-right: 10px;
+    }
+    &:hover {
+      background: $blue;
+      color: $grey;
+    }
+  }
+}
+
+.max-wbc-count-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: $medblue;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  .max-wbc {
+    width: 32%;
+    span {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: $grey;
+      width: 100%;
+    }
+    input {
+      @include input;
+      padding: 11px 10px;
+      text-align: center;
+      width: 100%;
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+  }
+  .wbcCount {
+    width: 65%;
+    h3 {
+      color: $grey;
+    }
+    .input-select-cont {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+    input {
+      @include input;
+      width: calc(50% - 2px);
+      font-size: 1rem;
+    }
+    select {
+      @include input;
+      width: calc(50% - 2px);
+      font-size: 1rem;
+    }
+  }
+}
+
+.numPad {
+  width: 100%;
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    td {
+      border: 5px solid $darkblue;
+      width: 25%;
+      max-width: 100px;
+      height: 80px;
+    }
+    button {
+      background-color: $verydarkblue;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+      display: inline-block;
+      color: $grey;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-weight: 500;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      &:hover {
+        background-color: #0e1119;
+      }
+      .numpad-key {
+        padding: 0 5%;
+        text-align: center;
+        width: 100%;
+        pointer-events: none;
+      }
+
+      .numpad-cell {
+        pointer-events: none;
+        overflow: hidden;
+        width: 100%;
+        font-size: 55%;
+        letter-spacing: 0.5px;
+        font-weight: 300;
+        color: #81b7fd;
+        padding: 0 5%;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
+.kiss {
+  animation: kiss 0.2s;
+}
+
+@keyframes kiss {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#counter-control-btns-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    @include button();
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.6rem;
+    transition: all 0.2s ease;
+    background-color: $grey;
+    color: $darkblue;
+  }
+  #clear-table-btn-container {
+    width: 50%;
+    button {
+      width: 98%;
+      &:hover {
+        background-color: $blue;
+        color: $grey;
+        //border: 2px solid $grey;
+      }
+    }
+  }
+  #plus-minus-btns {
+    width: 50%;
+    button {
+      width: calc(50% - 2px);
+      background: $grey;
+      color: $blue;
+      transition: all 0.2s ease;
+      &:hover {
+        background-color: $blue;
+        color: $grey;
+        //border: 2px solid $grey;
+      }
+    }
+  }
+}
+
+#counter-control-btns-container #plus-minus-btns .plus-minus-active {
+  background-color: $blue;
+  color: $grey;
+  border: 2px solid $grey;
+}

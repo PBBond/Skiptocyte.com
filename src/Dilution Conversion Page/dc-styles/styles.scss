@@ -1,0 +1,289 @@
+$darkblue: #161c2f;
+$medblue: #242d43;
+$medbluehover: #2e3955;
+$blue: #2f80ed;
+$bluehover: #2366be;
+$verydarkblue: #111525;
+$grey: #e5e5e5;
+$greyhover: #c0bfbf;
+$green: #17b890;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: #1c2237;
+}
+
+.container {
+    width: 95%;
+    margin: 50px auto;
+    min-width: 300px;
+    .dc-row {
+        margin-bottom: 10px;
+    }
+    .header-wrapper {
+        display: flex;
+        margin-bottom: 20px;
+        .add-dc-btn {
+            color: $medblue;
+            width: 15%;
+            padding: 10px;
+            font-size: 1.3rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            &:hover {
+                background: $blue;
+            }
+        }
+    }
+    h1 {
+        width: 68%;
+        text-align: center;
+        color: $grey;
+        font-weight: 500;
+
+        font-size: 2.2rem;
+    }
+    .dc-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $darkblue;
+        border-radius: 6px;
+        padding: 20px;
+        h3 {
+            color: $grey;
+            font-weight: normal;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 0.7px;
+        }
+        .value-container,
+        .dilution-factor-container,
+        .result-container {
+            width: 80%;
+            margin-bottom: 5%;
+        }
+        .value-container {
+            .value-pill {
+                display: flex;
+                align-items: center;
+
+                input {
+                    border-radius: 3px 0 0 3px;
+                    border: none;
+                    outline: none;
+                    min-height: 2rem;
+                    font-size: 2rem;
+                    padding: 5px 15px;
+                    color: $grey;
+                    font-weight: 500;
+                    background-color: $medblue;
+                    transition: all 0.3s ease;
+                    flex: 1;
+                    width: 90%;
+                    &:hover {
+                        background-color: $medbluehover;
+                    }
+                }
+                span {
+                    cursor: pointer;
+                    i {
+                        color: $grey;
+                        font-size: 1.5rem;
+                        padding: 12.1px;
+                        background: $blue;
+                        border-radius: 0 3px 3px 0;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            background-color: black;
+
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .dilution-factor-container {
+            .df-container {
+                display: flex;
+                justify-content: space-between;
+                span {
+                    font-size: 2rem;
+                    color: $grey;
+                    font-weight: 500;
+                }
+                input {
+                    width: 45%;
+                    border-radius: 3px;
+                    border: none;
+                    outline: none;
+                    min-height: 2rem;
+                    font-size: 2rem;
+                    padding: 5px;
+                    color: $grey;
+                    font-weight: 500;
+                    background-color: $medblue;
+                    text-align: center;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        background-color: $medbluehover;
+                    }
+                }
+            }
+        }
+        .result-container {
+            display: flex;
+            flex-direction: column;
+            .result-box {
+                border-radius: 3px;
+                border: none;
+                outline: none;
+                min-height: 2rem;
+                font-size: 2rem;
+                padding: 5px;
+                color: $grey;
+                font-weight: 500;
+                background-color: $blue;
+                text-align: center;
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+    textarea,
+    .note {
+        display: none;
+    }
+}
+
+@media (min-width: 601px) {
+    .container {
+        width: 90%;
+        max-width: 1000px;
+        .dc-box {
+            border-radius: 6px 0 0 6px;
+            flex-direction: row;
+            .value-container,
+            .dilution-factor-container {
+                margin-right: 3%;
+            }
+            .value-container,
+            .dilution-factor-container,
+            .result-container {
+                margin-bottom: 0;
+                width: 33%;
+            }
+        }
+        .result-container {
+            max-width: 33%;
+            .result-box {
+                overflow: hidden;
+            }
+        }
+        .dc-row {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .note {
+            display: inline-block;
+            background: $grey;
+            min-height: 100%;
+            width: 8%;
+            min-width: 30px;
+            border-radius: 0 6px 6px 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            position: relative;
+            cursor: pointer;
+            &:hover {
+                textarea {
+                    background: $greyhover;
+                }
+            }
+            i {
+                color: $verydarkblue;
+                height: 100%;
+                width: 100%;
+                padding-top: 50px;
+                transition: color 0.3s ease;
+                font-weight: 500;
+                position: absolute;
+                top: 5px;
+                pointer-events: none;
+                font-size: 1.4rem;
+            }
+            .fa-times-circle {
+                opacity: 0;
+            }
+            &:hover .fa-times-circle {
+                color: $grey;
+            }
+            &:hover .fa-sticky-note {
+                color: $blue;
+            }
+        }
+        textarea {
+            width: 0;
+            outline: none;
+            resize: none;
+            height: 127.43px;
+            border: none;
+            background: $grey;
+            color: $darkblue;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            overflow-x: hidden;
+            display: inline-block;
+            &:hover {
+                background: $greyhover;
+            }
+        }
+    }
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 50px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 10px 0;
+    position: absolute;
+    //z-index: 1;
+    top: 120%;
+    left: 120%;
+    margin-left: -60px;
+    font-size: 0.8rem;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    pointer-events: none;
+}
