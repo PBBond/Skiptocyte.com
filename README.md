@@ -1,7 +1,7 @@
 # Skiptocyte.com: Medical laboratory tools
 A website with tools for laboratory professionals. The main tool is the "cell counter" which is an advanced tallying tool. It helps laboratory technologists keep track of the cells they see under a microscope to determine their quantities and ratios and then print the report. It can be ran locally or seen at https://www.skiptocyte.com
 
-### How to run the applicaiton
+### How to run the application
 
  * Download the source code file from GitHub and unzip it
  * Open the src folder and open the index.html page. It should open and run fine without any running server
